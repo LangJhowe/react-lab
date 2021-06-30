@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/LangJhowe/react-lab/issues"
   },
-  "homepage": "https://github.com/LangJhowe/react-lab#readme"
+  "homepage": "https://github.com/LangJhowe/react-lab#readme",
+  "devDependencies": {
+    "create-react-app": "^4.0.3"
+  }
 }
