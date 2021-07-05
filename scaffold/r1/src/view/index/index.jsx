@@ -12,32 +12,33 @@ class v1 extends React.Component{
   }
   render() {
     console.log(this.props);
-   let {pageTitle,count} = userStore.getState()
-   let { addCount } = this.props
-   return (
-     <div>
-       <h1>here is index page.</h1>
-       <h2>user pageTitle: {pageTitle}</h2>
-       <h2>user count: {count}</h2>
+    console.log(process.env);
+    let {pageTitle,count} = userStore.getState()
+    let { addCount } = this.props
+    return (
+      <div>
+        <h1>here is index page.</h1>
+        <h2>user pageTitle: {pageTitle}</h2>
+        <h2>user count: {count}</h2>
 
-       <div>
-         <h2>store example</h2>
-         <div>
-           <span>redux</span>
-            <input type="text" value={count} onChange={e=>{
-              console.log(e);
-              userStore.dispatch('addCount',e)
-            }}/>
-         </div>
-         <input type="text" onChange={(e)=>{
-           console.log(userStore.getState());
-           console.log(globalStore);
-           console.log('getState',globalStore.getState());
+        <div>
+          <h2>store example</h2>
+          <div>
+            <span>redux</span>
+             <input type="text" value={count} onChange={e=>{
+               console.log(e);
+               userStore.dispatch('addCount',e)
+             }}/>
+          </div>
+          <input type="text" onChange={(e)=>{
+            console.log(userStore.getState());
+            console.log(globalStore);
+            console.log('getState',globalStore.getState());
 
 
-           console.log(e);
-         }}/>
-       </div>
+            console.log(e);
+          }}/>
+        </div>
         <button className="square" onClick={() => {
           // userStore.dispatch('addCount')
         }}>
@@ -49,21 +50,21 @@ class v1 extends React.Component{
         }}>
           +
         </button>
-     </div>
-   );
- }
+      </div>
+    );
+  }
 }
 
 const mapStateToProps = (state) => {
     return {
-        count: state.count,
+      count: state.count,
     }
 }
 // mapDispatchToProps：将dispatch映射到组件的props中
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     addCount () {
-        dispatch(addCount())
+      dispatch(addCount())
     }
   }
 }
