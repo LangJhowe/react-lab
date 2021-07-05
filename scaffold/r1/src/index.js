@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux'
 import globalStore from '@/store/global.js'
+import 'antd/dist/antd.css';
 
 ReactDOM.render(
   <React.StrictMode>
