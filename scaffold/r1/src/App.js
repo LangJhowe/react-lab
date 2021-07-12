@@ -1,4 +1,4 @@
-import { Route, Switch, Link, Redirect, BrowserRouter as Router } from 'react-router-dom'
+import { Route, Switch, Redirect, BrowserRouter as Router } from 'react-router-dom'
 
 import Index from './view/index'
 import About from './view/about'
@@ -8,7 +8,6 @@ import StylePage from '@/view/style'
 import ScssPage from '@/view/scss'
 import Layout from '@/layout'
 function App() {
-  console.log(Layout);
   return (
     <Router>
       {/* <ul>
